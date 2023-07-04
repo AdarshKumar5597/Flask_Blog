@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+{% block body %}
+      <!-- Page Header-->
+        <header class="masthead" style="background-image: url('      /static/assets/img/home-bg.jpg      ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>{{params['blog_name']}}</h1>
+                            <span class="subheading">A Blog liked by Programmers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+
+                    <!-- Post preview-->
+                    {% for post in posts.items %}
+                    <a href="/post/{{post.slug}}"></a>
+
+                    <div class="post-preview">
+                        <a href="/post/{{post.slug}}" target="_blank">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.tagline}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{params['blog_name']}}</a>
+                            {{post.date}}
+                        </p>
+                        <p>
+                            {{post.content[0:100]}}
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    {% endfor %}
+
+                    <!-- Pager-->
+                    <div class="clearfix">
+                        {% if posts.has_next %}<a class="btn btn-primary text-uppercase float-start" href="{{ url_for('home', page = posts.next_num) }}">← Previous</a>{% endif %}
+                        {% if posts.has_prev %}<a class="btn btn-primary text-uppercase float-end" href="{{ url_for('home', page = posts.prev_num) }}">Next →</a>{% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        {% endblock %}
+

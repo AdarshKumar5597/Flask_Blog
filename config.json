@@ -1,0 +1,23 @@
+{
+    "params":
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/the silent coders",
+        "prod_uri" : "mysql://root:@localhost/the silent coders",
+        "fb_url" : "https://facebook.com/theSilentCoders",
+        "tw_url" : "https:/twitter.com/theSilentCoders",
+        "gh_url" : "https://github.com/theSilentCoders",
+        "blog_name" : "The Silent Coders Blog",
+        "website_name" : "The Silent Coders",
+        "gmail-user" : "httpssilentcoders@gmail.com",
+        "gmail-password" : "hxxxvdjvfrjpacdf",
+        "about_text" : "Hi, This is The Silent Coders Blog. Here latest tecg blogs are uploaded regularly.",
+        "no_of_posts" : 2,
+        "login-img" : "login-img.svg",
+        "admin-user": "Adarsh",
+        "admin-password" : "SilentCoders@5597",
+        "btn-add" : "Add",
+        "btn-edit" : "Edit",
+        "upload_location" : "C:\\Users\\KIIT\\Documents\\PYTHON\\FLASK\\Uploaded_files"
+    }
+}
